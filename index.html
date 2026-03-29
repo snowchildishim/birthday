@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Happy Birthday Bunny 🎀</title>
+  <title>Happy Birthday Bunnyyyyy</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300&family=Dancing+Script:wght@600&display=swap" rel="stylesheet"/>
   <style>
     :root {
@@ -15,34 +15,15 @@
       --soft: #fbd5e5;
       --text: #3d1f2b;
     }
-
     * { margin: 0; padding: 0; box-sizing: border-box; }
-
     html { scroll-behavior: smooth; }
-
     body {
       background-color: var(--cream);
       color: var(--text);
       font-family: 'Cormorant Garamond', serif;
       overflow-x: hidden;
-      cursor: none;
     }
 
-    /* Custom cursor */
-    .cursor {
-      position: fixed;
-      width: 18px;
-      height: 18px;
-      background: var(--rose);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      transform: translate(-50%, -50%);
-      transition: transform 0.1s ease, background 0.3s;
-      mix-blend-mode: multiply;
-    }
-
-    /* Floating petals */
     .petals-bg {
       position: fixed;
       top: 0; left: 0;
@@ -51,7 +32,6 @@
       z-index: 0;
       overflow: hidden;
     }
-
     .petal {
       position: absolute;
       top: -40px;
@@ -59,13 +39,10 @@
       opacity: 0.5;
       animation: fall linear infinite;
     }
-
     @keyframes fall {
       0%   { transform: translateY(-40px) rotate(0deg); opacity: 0.6; }
       100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
     }
-
-    /* ---- HERO ---- */
     .hero {
       position: relative;
       min-height: 100vh;
@@ -77,7 +54,6 @@
       padding: 60px 24px;
       z-index: 1;
     }
-
     .hero::before {
       content: '';
       position: absolute;
@@ -88,7 +64,6 @@
         radial-gradient(ellipse at 50% 100%, rgba(232,96,122,0.12) 0%, transparent 50%);
       z-index: -1;
     }
-
     .tag {
       font-family: 'Dancing Script', cursive;
       font-size: 1.1rem;
@@ -98,7 +73,6 @@
       opacity: 0;
       animation: fadeUp 0.8s 0.3s forwards;
     }
-
     .hero-name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(4rem, 14vw, 9rem);
@@ -109,12 +83,7 @@
       opacity: 0;
       animation: fadeUp 0.9s 0.5s forwards;
     }
-
-    .hero-name span {
-      color: var(--rose);
-      font-style: italic;
-    }
-
+    .hero-name span { color: var(--rose); font-style: italic; }
     .hero-sub {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.1rem, 3vw, 1.6rem);
@@ -126,19 +95,16 @@
       opacity: 0;
       animation: fadeUp 1s 0.8s forwards;
     }
-
     .bow {
       font-size: 3rem;
       margin-bottom: 10px;
       opacity: 0;
       animation: fadeUp 0.7s 0.2s forwards, wiggle 3s 1.5s infinite;
     }
-
     @keyframes wiggle {
       0%, 100% { transform: rotate(-5deg); }
       50% { transform: rotate(5deg); }
     }
-
     .scroll-hint {
       margin-top: 48px;
       font-family: 'Dancing Script', cursive;
@@ -147,18 +113,14 @@
       opacity: 0;
       animation: fadeUp 1s 1.5s forwards, bounce 2s 2.5s infinite;
     }
-
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
       50% { transform: translateY(8px); }
     }
-
     @keyframes fadeUp {
       from { opacity: 0; transform: translateY(24px); }
       to   { opacity: 1; transform: translateY(0); }
     }
-
-    /* Divider */
     .divider {
       text-align: center;
       padding: 12px 0;
@@ -168,16 +130,13 @@
       z-index: 1;
       position: relative;
     }
-
-    /* ---- MESSAGE SECTION ---- */
     .section {
       position: relative;
       z-index: 1;
-      max-width: 780px;
+      max-width: 900px;
       margin: 0 auto;
       padding: 60px 28px;
     }
-
     .section-label {
       font-family: 'Dancing Script', cursive;
       font-size: 1rem;
@@ -186,17 +145,15 @@
       text-transform: uppercase;
       margin-bottom: 10px;
     }
-
     .message-card {
       background: white;
       border: 1.5px solid var(--soft);
       border-radius: 24px;
-      padding: 44px 40px;
+      padding: 60px 48px 56px;
       box-shadow: 0 8px 40px rgba(232,96,122,0.08), 0 2px 8px rgba(242,167,195,0.12);
       position: relative;
       overflow: hidden;
     }
-
     .message-card::before {
       content: '❝';
       position: absolute;
@@ -206,16 +163,15 @@
       font-family: 'Playfair Display', serif;
       line-height: 1;
     }
-
     .message-text {
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(1.15rem, 2.5vw, 1.45rem);
       font-weight: 300;
-      line-height: 1.85;
+      line-height: 1.95;
       color: var(--text);
       padding-top: 12px;
+      min-height: 320px;
     }
-
     .message-sign {
       margin-top: 24px;
       font-family: 'Dancing Script', cursive;
@@ -223,8 +179,7 @@
       color: var(--rose);
       text-align: right;
     }
-
-    /* ---- SPOTIFY CARD ---- */
+    /* SPOTIFY CARD */
     .spotify-card {
       display: flex;
       flex-direction: column;
@@ -237,14 +192,12 @@
       box-shadow: 0 24px 70px rgba(0,0,0,0.55);
       padding-bottom: 28px;
     }
-
     .album-cover-svg {
       width: 100%;
       aspect-ratio: 1/1;
       object-fit: cover;
       display: block;
     }
-
     .spotify-info {
       padding: 24px 28px 0;
       width: 100%;
@@ -252,27 +205,19 @@
       flex-direction: column;
       gap: 14px;
     }
-
-    .spotify-meta {
-      display: flex;
-      flex-direction: column;
-      gap: 3px;
-    }
-
+    .spotify-meta { display: flex; flex-direction: column; gap: 3px; }
     .spotify-track {
       font-family: 'Playfair Display', serif;
       font-size: 1.25rem;
       font-weight: 700;
       color: white;
     }
-
     .spotify-artist {
       font-family: 'Cormorant Garamond', serif;
       font-size: 0.95rem;
       color: rgba(255,255,255,0.5);
       letter-spacing: 0.04em;
     }
-
     .lyrics-text {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.05rem;
@@ -280,27 +225,13 @@
       color: rgba(255,255,255,0.75);
       line-height: 1.75;
     }
-
-    .spotify-bar-wrap {
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
+    .spotify-bar-wrap { display: flex; flex-direction: column; gap: 6px; }
     .spotify-bar {
-      width: 100%;
-      height: 3px;
+      width: 100%; height: 3px;
       background: rgba(255,255,255,0.15);
       border-radius: 2px;
     }
-
-    .bar-fill {
-      width: 38%;
-      height: 100%;
-      background: #1DB954;
-      border-radius: 2px;
-    }
-
+    .bar-fill { width: 38%; height: 100%; background: #1DB954; border-radius: 2px; }
     .spotify-time {
       display: flex;
       justify-content: space-between;
@@ -308,68 +239,38 @@
       color: rgba(255,255,255,0.35);
       font-family: 'Cormorant Garamond', serif;
     }
-
     .spotify-controls {
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      color: rgba(255,255,255,0.6);
-      font-size: 1.3rem;
     }
-
     .ctrl-btn {
-      background: none;
-      border: none;
+      background: none; border: none;
       color: rgba(255,255,255,0.6);
       font-size: 1.3rem;
-      cursor: pointer;
-      padding: 8px;
+      cursor: pointer; padding: 8px;
       transition: color 0.2s;
     }
     .ctrl-btn:hover { color: white; }
-
     .play-btn {
-      width: 52px;
-      height: 52px;
+      width: 52px; height: 52px;
       background: white;
-      border-radius: 50%;
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #121212;
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding-left: 4px;
+      border-radius: 50%; border: none;
+      display: flex; align-items: center; justify-content: center;
+      color: #121212; font-size: 1.1rem;
+      cursor: pointer; padding-left: 4px;
       transition: transform 0.15s ease;
     }
     .play-btn:hover { transform: scale(1.08); }
-
-    .spotify-logo {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      opacity: 0.5;
-    }
-
-    /* ---- LYRICS SECTION ---- */
+    .spotify-logo { display: flex; align-items: center; justify-content: flex-end; opacity: 0.5; }
     .lyrics-section {
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
       background: linear-gradient(135deg, var(--rose) 0%, var(--mauve) 100%);
       padding: 70px 28px;
       text-align: center;
       overflow: hidden;
     }
-
-    .lyrics-section::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-    }
-
     .lyrics-label {
       font-family: 'Dancing Script', cursive;
       font-size: 1rem;
@@ -379,24 +280,12 @@
       margin-bottom: 20px;
       position: relative;
     }
-
-    .lyrics-song {
-      margin-top: 20px;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1rem;
-      color: rgba(255,255,255,0.65);
-      letter-spacing: 0.08em;
-      position: relative;
-    }
-
-    /* ---- WISHES ---- */
     .wishes-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
       margin-top: 32px;
     }
-
     .wish-card {
       background: white;
       border: 1.5px solid var(--soft);
@@ -406,37 +295,22 @@
       box-shadow: 0 4px 20px rgba(232,96,122,0.06);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .wish-card:hover {
       transform: translateY(-6px);
       box-shadow: 0 12px 32px rgba(232,96,122,0.14);
     }
-
     .wish-icon { font-size: 2rem; margin-bottom: 12px; }
-
     .wish-title {
       font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--rose);
-      margin-bottom: 8px;
+      font-size: 1.1rem; font-weight: 700;
+      color: var(--rose); margin-bottom: 8px;
     }
-
-    .wish-body {
-      font-size: 0.98rem;
-      font-weight: 300;
-      line-height: 1.65;
-      color: #7a4055;
-    }
-
-    /* ---- FOOTER ---- */
+    .wish-body { font-size: 0.98rem; font-weight: 300; line-height: 1.65; color: #7a4055; }
     .footer {
-      position: relative;
-      z-index: 1;
+      position: relative; z-index: 1;
       text-align: center;
       padding: 60px 24px 80px;
     }
-
     .footer-name {
       font-family: 'Playfair Display', serif;
       font-size: clamp(2.5rem, 8vw, 5rem);
@@ -446,19 +320,10 @@
       line-height: 1;
       margin-bottom: 20px;
     }
-
-    .footer-msg {
-      font-family: 'Dancing Script', cursive;
-      font-size: 1.2rem;
-      color: var(--mauve);
-    }
-
-    /* ---- confetti burst on click ---- */
+    .footer-msg { font-family: 'Dancing Script', cursive; font-size: 1.2rem; color: var(--mauve); }
     .burst {
-      position: fixed;
-      pointer-events: none;
-      z-index: 9998;
-      font-size: 1.2rem;
+      position: fixed; pointer-events: none;
+      z-index: 9998; font-size: 1.2rem;
       animation: burstOut 0.9s forwards;
     }
     @keyframes burstOut {
@@ -468,33 +333,28 @@
   </style>
 </head>
 <body>
-
-  <div class="cursor" id="cursor"></div>
   <div class="petals-bg" id="petals"></div>
 
-  <!-- HERO -->
   <section class="hero">
     <div class="bow">🎀</div>
     <div class="tag">today is all about you ✨</div>
-    <h1 class="hero-name">Happy Birthday<br><span>Bunny</span></h1>
+    <h1 class="hero-name">Happy Birthday<br><span>Bunnyyyyy</span></h1>
     <p class="hero-sub">wishing you the most magical day ever</p>
     <p class="scroll-hint">scroll down ↓</p>
   </section>
 
   <div class="divider">🌸 · 🌸 · 🌸</div>
 
-  <!-- MESSAGE -->
   <section class="section">
     <p class="section-label">a little something for you</p>
     <div class="message-card">
       <p class="message-text">
-        Bunny, where do I even start? You light up every room you walk into and you make everything more fun just by being there. You deserve a whole day — scratch that, a whole <em>year</em> — dedicated to celebrating how amazing you are. I hope today is as beautiful and wonderful as you are. 💕
+        HAPPYYY BIRTHDAY BUNBUN. Bro idek how to start, words can't do justice to express how goated you are and what u mean to me. You light every room you walk into, you make everyone's life better just by being in it. You deserve the whole world, every ounce of happiness, you deserve everything u have ever wished for bro. This is your day queen enjoy it to your fullest. Dont let the negativity get to you, you are THE 🐐. But you are still short tho 😛.
       </p>
-      <div class="message-sign">— weeeeeeeeeeeeeeee</div>
+      <div class="message-sign">— weeeeeeeeeeee</div>
     </div>
   </section>
 
-  <!-- LYRICS / SPOTIFY CARD -->
   <div class="lyrics-section">
     <p class="lyrics-label">🎵 a song that reminds me of you</p>
     <div class="spotify-card">
@@ -504,7 +364,7 @@
           <span class="spotify-track">Die For You</span>
           <span class="spotify-artist">The Weeknd · Starboy</span>
         </div>
-        <p class="lyrics-text" id="lyrics-text">
+        <p class="lyrics-text">
           Even though you're going through it and it makes you feel alone,<br>just know that I would die for you.
         </p>
         <div class="spotify-bar-wrap">
@@ -529,46 +389,37 @@
     </div>
   </div>
 
-  <!-- WISHES -->
   <section class="section">
-    <p class="section-label">birthday wishes for you 🌷</p>
+    <p class="section-label">birthday wishes for my fav hg 🐐</p>
     <div class="wishes-grid">
       <div class="wish-card">
         <div class="wish-icon">💫</div>
         <div class="wish-title">All the good vibes</div>
-        <div class="wish-body">May every single thing go right for you today and always.</div>
+        <div class="wish-body">May every single thing go right for you today and alwaysssss.</div>
       </div>
       <div class="wish-card">
         <div class="wish-icon">🌸</div>
         <div class="wish-title">Love & warmth</div>
-        <div class="wish-body">You deserve all the love in the world — and then some.</div>
+        <div class="wish-body">Trust me you deserve all of it. u da best twin</div>
       </div>
       <div class="wish-card">
         <div class="wish-icon">✨</div>
         <div class="wish-title">Big things ahead</div>
-        <div class="wish-body">This year is going to be your best one yet. I just know it.</div>
+        <div class="wish-body">YOU GOT SO MANY GOOD THINGS COMING YOUR WAY!!!!!.</div>
       </div>
     </div>
   </section>
 
   <div class="divider">🌸 · 🌸 · 🌸</div>
 
-  <!-- FOOTER -->
   <div class="footer">
     <div class="footer-name">Bunny</div>
-    <p class="footer-msg">made with so much love </p>
+    <p class="footer-msg">THE BEST PERSON WHO COULD EVER COME INTO MY LIFE</p>
   </div>
 
   <script>
-    // Custom cursor
-    const cursor = document.getElementById('cursor');
-    document.addEventListener('mousemove', e => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top  = e.clientY + 'px';
-    });
 
-    // Floating petals
-    const emojis = ['🌸','🌷','✨','🎀','🩷',];
+    const emojis = ['🌸','🌷','✨','🎀','🩷'];
     const petalsContainer = document.getElementById('petals');
     for (let i = 0; i < 9; i++) {
       const p = document.createElement('div');
@@ -580,7 +431,21 @@
       p.style.fontSize = (0.8 + Math.random() * 0.7) + 'rem';
       petalsContainer.appendChild(p);
     }
-
+    document.addEventListener('click', e => {
+      for (let i = 0; i < 8; i++) {
+        const el = document.createElement('div');
+        el.className = 'burst';
+        el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        el.style.left = e.clientX + 'px';
+        el.style.top  = e.clientY + 'px';
+        const angle = (Math.random() * 360) * Math.PI / 180;
+        const dist  = 60 + Math.random() * 80;
+        el.style.setProperty('--dx', Math.cos(angle) * dist + 'px');
+        el.style.setProperty('--dy', Math.sin(angle) * dist + 'px');
+        document.body.appendChild(el);
+        setTimeout(() => el.remove(), 900);
+      }
+    });
   </script>
 </body>
 </html>
